@@ -1,13 +1,13 @@
 {% set name = "pymmcore-widgets" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymmcore-widgets-{{ version }}.tar.gz
-  sha256: c7886a0953d630f871771f5671caf605aa2ec4c5d328e25ba6e631b9eb559e24
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 7c0c338e2637902cc97a41699eb54bf22de53c632cc96a130a5eeca27d2c8f21
 
 build:
   noarch: python
