@@ -9,6 +9,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: d29b7520ff44772fd2c04f0fdc055fa4b5ca35d0a43a7a617e4b937dcde2c002
 
+
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -18,14 +19,16 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools-scm
+    - hatchling
+    - hatch-vcs
   run:
     - fonticon-materialdesignicons6
-    - pymmcore-plus >=0.6.3
+    - pymmcore-plus >=0.8.1
     - python >=3.8
-    - qtpy
-    - superqt >=0.3.1
-    - useq-schema >=0.1.2
+    - qtpy >=2.0
+    - superqt >=0.5.3
+    - pint
+    - useq-schema >=0.4.6
 
 test:
   imports:
