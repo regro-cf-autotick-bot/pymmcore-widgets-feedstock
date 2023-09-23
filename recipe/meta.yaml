@@ -26,6 +26,7 @@ requirements:
     - python >=3.8
     - qtpy >=2.0
     - superqt >=0.3.1
+    - pint
     - useq-schema >=0.4.6
 
 test:
