@@ -1,5 +1,5 @@
 {% set name = "pymmcore-widgets" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b23f71e0fe98f0dab9b3638c59076912f1dc804c486ef0bb751390d295f06929
+  sha256: d29b7520ff44772fd2c04f0fdc055fa4b5ca35d0a43a7a617e4b937dcde2c002
+
 
 build:
   noarch: python
@@ -22,10 +23,10 @@ requirements:
     - hatch-vcs
   run:
     - fonticon-materialdesignicons6
-    - pymmcore-plus >=0.8.0
+    - pymmcore-plus >=0.8.1
     - python >=3.8
     - qtpy >=2.0
-    - superqt >=0.3.1
+    - superqt >=0.5.3
     - pint
     - useq-schema >=0.4.6
 
