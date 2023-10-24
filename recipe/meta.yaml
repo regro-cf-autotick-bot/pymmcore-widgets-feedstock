@@ -1,5 +1,5 @@
 {% set name = "pymmcore-widgets" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 20ac8ec630c9e5f962b4ea04d0102d83056baddbdacec8ec641e044006e9342b
+  sha256: c9761e4729f85f6a8ae2a83cff3cbdc953be4fa211da11529321b68f5d0b1029
 
 
 build:
@@ -23,6 +23,7 @@ requirements:
     - hatch-vcs
   run:
     - fonticon-materialdesignicons6
+    - pymmcore
     - pymmcore-plus >=0.8.1
     - python >=3.8
     - qtpy >=2.0
@@ -41,10 +42,11 @@ test:
     - pyqt
 
 about:
-  home: https://github.com/pymmcore-plus/pymmcore-widgets
+  home: https://pypi.org/project/pymmcore-widgets
   summary: A set of Qt-based widgets onto the pymmcore-plus model
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/pymmcore-plus/pymmcore-widgets
 
 extra:
   recipe-maintainers:
