@@ -23,6 +23,7 @@ requirements:
     - hatch-vcs
   run:
     - fonticon-materialdesignicons6
+    - pymmcore
     - pymmcore-plus >=0.8.1
     - python >=3.8
     - qtpy >=2.0
@@ -41,10 +42,11 @@ test:
     - pyqt
 
 about:
-  home: https://github.com/pymmcore-plus/pymmcore-widgets
+  home: https://pypi.org/project/pymmcore-widgets
   summary: A set of Qt-based widgets onto the pymmcore-plus model
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/pymmcore-plus/pymmcore-widgets
 
 extra:
   recipe-maintainers:
