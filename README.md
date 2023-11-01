@@ -3,11 +3,13 @@ About pymmcore-widgets-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymmcore-widgets-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/pymmcore-plus/pymmcore-widgets
+Home: https://pypi.org/project/pymmcore-widgets
 
 Package license: BSD-3-Clause
 
 Summary: A set of Qt-based widgets onto the pymmcore-plus model
+
+Development: https://github.com/pymmcore-plus/pymmcore-widgets
 
 Current build status
 ====================
