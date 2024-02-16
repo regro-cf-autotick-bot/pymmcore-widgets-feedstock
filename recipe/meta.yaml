@@ -1,5 +1,5 @@
 {% set name = "pymmcore-widgets" %}
-{% set version = "0.5.6" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: e658d1fe956d37cc1b429d6d896376100f22da155a51499b743bdf3cc68cfd54
+  sha256: 2453c04994518fd80f8c93bab8db599ef1a1b38d70b071338ddaebc490f4bb72
 
 
 build:
