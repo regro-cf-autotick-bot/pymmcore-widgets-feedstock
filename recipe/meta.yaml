@@ -1,5 +1,5 @@
 {% set name = "pymmcore-widgets" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 1d318827fb72fce8b9da60fa2edd15fa7344fd544d955e088d2738334a8b8638
+  sha256: 69dd12904ffe4f2c3ab0925c358d31dbb38ba94efc0ffd5c95f6a6e95d11a4fc
 
 
 build:
@@ -24,12 +24,12 @@ requirements:
   run:
     - fonticon-materialdesignicons6
     - pymmcore
-    - pymmcore-plus >=0.8.1
+    - pymmcore-plus >=0.11.0
     - python >=3.8
     - qtpy >=2.0
     - superqt >=0.5.3
     - pint
-    - useq-schema >=0.4.6
+    - useq-schema >=0.5.0
 
 test:
   imports:
