@@ -6,26 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 69dd12904ffe4f2c3ab0925c358d31dbb38ba94efc0ffd5c95f6a6e95d11a4fc
 
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
   run:
     - fonticon-materialdesignicons6
     - pymmcore
     - pymmcore-plus >=0.11.0
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy >=2.0
     - superqt >=0.5.3
     - pint
@@ -40,6 +40,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pymmcore-widgets
