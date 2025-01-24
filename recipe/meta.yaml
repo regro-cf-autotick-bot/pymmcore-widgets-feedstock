@@ -18,14 +18,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
   run:
     - fonticon-materialdesignicons6
     - pymmcore
     - pymmcore-plus >=0.11.0
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy >=2.0
     - superqt >=0.5.3
     - pint
@@ -40,6 +40,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pymmcore-widgets
