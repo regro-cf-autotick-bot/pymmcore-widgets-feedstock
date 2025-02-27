@@ -1,13 +1,13 @@
 {% set name = "pymmcore-widgets" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 69dd12904ffe4f2c3ab0925c358d31dbb38ba94efc0ffd5c95f6a6e95d11a4fc
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6ad2edd7ed80052c105a06cd2d398b1555e21a616180e4c909f8e5136d907f5b
 
 
 build:
