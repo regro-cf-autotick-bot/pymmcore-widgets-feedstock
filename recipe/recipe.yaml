@@ -1,0 +1,62 @@
+schema_version: 1
+
+context:
+  name: pymmcore-widgets
+  version: "0.12.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymmcore_widgets-${{ version }}.tar.gz
+  sha256: b3c6a3909b9535093cebe454543f40eaeed658cea6752d1d7cc8adb9845ffc42
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - hatch-vcs
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - pymmcore-plus >=0.15.4
+    # upstream only requires pyopengl on macOS
+    - pyopengl >=3.1.9
+    - qtpy >=2.0
+    - shapely >=2.0.7
+    - superqt >=0.7.1
+    # superqt[cmap,iconify,quantity] extras
+    - cmap >=0.2
+    - pyconify >=0.1.4
+    - pint >=0.21
+    - useq-schema >=0.8.1
+    - vispy >=0.15.1
+
+tests:
+  # importing pymmcore_widgets requires a Qt binding
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+        - pyqt6
+    script:
+      - python -c "import pymmcore_widgets"
+      - pip check
+
+about:
+  summary: A set of Qt-based widgets onto the pymmcore-plus model
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/pymmcore-plus/pymmcore-widgets
+  repository: https://github.com/pymmcore-plus/pymmcore-widgets
+
+extra:
+  recipe-maintainers:
+    - tlambert03
+    - fdrgsp
